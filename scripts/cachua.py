@@ -5,20 +5,25 @@
 import time
 from playsound import playsound
 
-counter = 3
-beep_sec = '/home/hien/OneDrive-HSJ/Workspace/cachua/assets/Electronic_Chime-KevanGC-495939803.mp3'
-beep_end = '/home/hien/OneDrive-HSJ/Workspace/cachua/assets/Bicycle Bell Ringing-SoundBible.com-607558103.mp3'
+def count(duration):
+    count_beep = '/home/hien/OneDrive-HSJ/Workspace/cachua/assets/Electronic_Chime-KevanGC-495939803.mp3'
+    final_beep = '/home/hien/OneDrive-HSJ/Workspace/cachua/assets/Bicycle Bell Ringing-SoundBible.com-607558103.mp3'
 
-while counter > 0:
-    print(counter)
-    counter -= 1
-    time.sleep(1)
-    
-playsound(beep)
+    while duration > 0:
+        # TODO: Add curses
+        # print(duration)
+        # TODO: Play beep in a parallel thread
+        # playsound(count_beep)
+        duration -= 1
+        time.sleep(1)
+        
+    playsound(final_beep)
 
 if __name__=="__main__":
-    pass
-    
-# TODO: add curses
-# TODO; read from configuration file
+    # TODO: Read from configuration file
+    duration = 15
+    exercises = ["Downward Dog", "Cobra", "Side Plank", "Other Side Plank", "Plank", "Plank Again", "Back Stretch"]
+    for exercise in exercises:
+        print(exercise + "!")
+        count(duration)
 
