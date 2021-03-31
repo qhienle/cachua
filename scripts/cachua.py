@@ -6,8 +6,8 @@ import time
 from playsound import playsound
 
 def count(duration):
-    count_beep = '/home/hien/OneDrive-HSJ/Workspace/cachua/assets/Electronic_Chime-KevanGC-495939803.mp3'
-    final_beep = '/home/hien/OneDrive-HSJ/Workspace/cachua/assets/Bicycle Bell Ringing-SoundBible.com-607558103.mp3'
+    count_beep = '../assets/Electronic_Chime-KevanGC-495939803.mp3'
+    final_beep = '../assets/Bicycle Bell Ringing-SoundBible.com-607558103.mp3'
 
     while duration > 0:
         # TODO: Add curses
