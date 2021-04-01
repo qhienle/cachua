@@ -2,6 +2,7 @@
 
 # An interval countdown timer
 
+import os
 import time
 from playsound import playsound
 
@@ -16,14 +17,24 @@ def count(duration):
         # playsound(count_beep)
         duration -= 1
         time.sleep(1)
-        
+
     playsound(final_beep)
 
 if __name__=="__main__":
     # TODO: Read from configuration file
     duration = 15
     exercises = ["Downward Dog", "Cobra", "Side Plank", "Other Side Plank", "Plank", "Plank Again", "Back Stretch"]
+
+    script_path = os.path.abspath(__file__)
+    workdir = os.path.dirname(script_path)
+    os.chdir(workdir)
+
+    print("Ready, get set,...!")
+    for i in range(3):
+        playsound('../assets/Electronic_Chime-KevanGC-495939803.mp3')
+    print("Go!")
     for exercise in exercises:
         print(exercise + "!")
         count(duration)
 
+    playsound('../assets/Bike Horn-SoundBible.com-602544869.mp3')
