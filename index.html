@@ -7,13 +7,21 @@
   <body>
     <h1>CàChua</h1>
     <p id="timer">
-      00:00:00
+      00:00
     </p>
     <button onclick="beep()">Beep</button>
+    <button onclick="start(delayFunction(), 15000)">Start</button>
+    <button onclick="reset()">Reset</button>
     <script>
+      function reset() {
+        document.getElementById("timer").innerHTML = "15:00"
+      }
       function beep() {
         const audio = new Audio('./assets/Bicycle Bell Ringing-SoundBible.com-607558103.mp3');
         audio.play();
+      }
+      function start() {
+        document.getElementById("timer").innerHTML = "Beep!";
       }
     </script>
   </body>
