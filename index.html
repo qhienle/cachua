@@ -6,10 +6,13 @@
   </head>
   <body>
     <h1>CàChua</h1>
+    <p id="timer">
+      00:00:00
+    </p>
     <button onclick="beep()">Beep</button>
     <script>
       function beep() {
-        var audio = new Audio('./assets/Bicycle Bell Ringing-SoundBible.com-607558103.mp3');
+        const audio = new Audio('./assets/Bicycle Bell Ringing-SoundBible.com-607558103.mp3');
         audio.play();
       }
     </script>
