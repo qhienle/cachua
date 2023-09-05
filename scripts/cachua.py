@@ -34,13 +34,13 @@ def main():
 
     # Warn: Ready, get set, go!
     print("Ready, get set,...!")
-    for i in range(3):
+    for _ in range(3):
         playsound('../assets/Electronic_Chime-KevanGC-495939803.mp3')
     print("Go!")
 
     # Begin series of exercises
     for exercise in exercises:
-        print(exercise + "!")
+        print(f"{exercise}!")
         count(duration)
 
     playsound('../assets/Bike Horn-SoundBible.com-602544869.mp3')
